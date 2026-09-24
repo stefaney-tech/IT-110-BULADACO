@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast and Furious at its Peak</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="main-heading">Why I love Fast and Furious</h1>
+    </header>
+    <p>Haven't watched the movies yet? You are missing out... a lot!</p>
+
+    <nav id="top-nav">
+      <a href="#image-section">Favorites</a>
+      <a href="#links-section">Link</a>
+      <a href="#multimedia-section">Multimedia</a>
+      <a href="#tags-section">Crew</a>
+      <a href="#dom-section">HTML DOM</a>
+    </nav>
+
+    <section id="image-section">
+      <h2>Top 3 Favorites</h2>
+      <p>
+        Inspired by the fast-paced action, strong character aura, and incredible
+        car showcases. These three movies holds a special place in my heart.
+      </p>
+      <img
+        src="images/fast1.png"
+        alt="Movie poster for The Fast and the Furious featuring Vin Diesel, Michelle Rodriguez, Jordana Brewster, Paul Walker, and a speeding sports car."
+        width="250"
+        height="380"
+      />
+
+      <img
+        src="images/2Fast_2Furious.png"
+        alt="Movie poster for 2 Fast 2 Furious featuring Paul Walker, Tyrese Gibson, Eva Mendes, Ludacris, Devon Aoki, and three glowing street racing cars."
+        width="250"
+        height="380"
+      />
+
+      <figure>
+        <img
+          src="images/furious7.png"
+          alt="Movie poster for Furious 7 featuring Dwayne Johnson, Michelle Rodriguez, Paul Walker, Vin Diesel, Tyrese Gibson, Ludacris, and Jordana Brewster with the tagline 'One Crew. One Last Ride.'"
+          width="250"
+          height="380"
+        />
+        <figcaption>Figure 1: Furious 7 Official Movie Poster</figcaption>
+      </figure>
+    </section>
+
+    <section id="links-section">
+      <h2>Franchise Links</h2>
+      <ul>
+        <li>
+          <a href="crew.html">Internal Link: </a>Visit The Crew page, a second
+          file in this same project.
+        </li>
+
+        <li>
+          <a
+            href="https://fastandfurious.fandom.com/wiki/Main_Page"
+            target="_blank"
+            rel="noopener noreferrer"
+            >External Link: </a
+          >Opens a fan community and wiki page for the Fast and Furious
+          franchise.
+        </li>
+
+        <li>
+          <a href="mailto:[email protected]?subject=Crew%20Question"
+            >Email link:</a
+          >
+          Opens your email client to message the crew's mechanic.
+        </li>
+        <li>
+          <a href="#dom-section">Anchor Link: </a>Jump down to the HTML DOM of
+          this page.
+        </li>
+      </ul>
+    </section>
+
+    <section id="multimedia-section">
+      <h2>Multimedia</h2>
+      <h3>It's Brian</h3>
+      <audio id="edits-audio" controls>
+        <source src="media/What's_Up.mp3" type="audio/mpeg" />
+        Oops! Your browser does not support the audio element. You can
+        <a href="media/What's_Up.mp3">download the audio file</a> instead.
+      </audio>
+
+      <h3>Racing Highlights</h3>
+      <video id="race-video" controls width="480">
+        <source src="media/Jumping_the_Bridge.mp4" type="video/mp4" />
+        Oops! Your browser does not support the video element. You can
+        <a href="media/Jumping_the_Bridge.mp4">download the video file</a>
+        instead.
+      </video>
+    </section>
+
+    <section id="tags-section">
+      <h2>Crew Notes</h2>
+      <!-- I chose blockquote to highlight that this qoute is a direct qoute from the movie spoken by Dominic Toretto -->
+      <blockquote>
+        I don't have friends, I got family.
+        <cite>— Dominic Toretto</cite>
+      </blockquote>
+      <!-- I chose abbreviation to provide a brief explanation of the famous acronym NOS -->
+      <p>
+        Fun fact: <abbr title="Nitrous Oxide System">NOS</abbr> really works in
+        cars, but not quite the way The Fast and Furious shows it. No blue
+        flames from the exhaust, no instant teleport mode, and not without
+        serious risk to the engine.
+      </p>
+      <!-- I chose mark to highlight the most memorable and important rule of the crew -->
+      <p>
+        One rule of the crew:
+        <mark
+          ><i>You don't turn your back on family— even when they do.</i></mark
+        >
+      </p>
+      <!-- I chose to preserve whitespaces to display the garage information in a manner of how exactly i typed it in and to avoid using multiple breaks instead -->
+      <pre>
+        <b>Brian's Best Ride</b>
+          Model: 1999 Nissan Skyline GT-R R34
+          Feature: 2.6L RB26DETT inline-6 twin-turbo
+          Engine: Approx. 330-450 hp
+          Highlight: All-wheel drive traction and precision handling</pre>
+    </section>
+    <section id="dom-section">
+      <h2>HTML DOM</h2>
+      <figure>
+        <img
+          src="dom-tree.png"
+          alt="Screenshot of the HTML DOM tree for this page."
+          width="480"
+          height="360"
+        />
+        <figcaption>
+          Figure 2: DOM tree showing body at the top all the way down through
+          link-section to ul to li and to a.
+        </figcaption>
+      </figure>
+    </section>
+    <!-- So basically, as what I see in the DOM tree that I screenshotted, <a> elements are nested within and the child of <li> elements and <li> elements are the child of <ul> elements and <ul> elements are the child of <section id="link-section"> element that is the child of the body element. It's a bit confusing at first but seeing the tree structure makes it easier to understand. Everything in
+  HTML is just somewhat nested inside something else. -->
+  </body>
+</html>
