@@ -1,0 +1,182 @@
+/* --- RESET AND BASIC STYLES --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #220c12;
+  color: #f5e9d0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Grouping selector for the headings */
+h1,
+h2 {
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #eeb6a5;
+}
+
+/* --- HEADER AND NAVIGATION --- */
+
+header {
+  background-color: #430d14;
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 2px solid #c9194f;
+}
+
+header h1 {
+  color: #f5e9d0;
+  margin-bottom: 15px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 4px;
+  background-color: #7f0712;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+/* Pseudo-class: changes the link when the mouse is over it */
+nav a:hover {
+  background-color: #c9194f;
+}
+
+/* --- MAIN CONTENT AND CARDS --- */
+
+main {
+  padding: 35px 15px;
+}
+
+.card {
+  width: 500px;
+  padding: 24px;
+  border: 2px solid #6f1720;
+  border-radius: 10px;
+  background-color: #310b12;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Cascade example: h2 is styled above, but .card h2 is more specific than the h2 selector, so this rule wins for headings inside cards. */
+.card h2 {
+  color: #f0b7a8;
+  border-bottom: 1px solid #8f1723;
+  padding-bottom: 6px;
+}
+
+/* Descendant selector */
+.card p {
+  margin-bottom: 12px;
+}
+
+/* Class selector */
+.intro {
+  color: #e8c9b8;
+  font-weight: bold;
+}
+
+/* ID selector */
+#about {
+  position: relative;
+  border-color: #c9194f;
+}
+
+/* Pseudo-element used as a small badge */
+#about::after {
+  content: ">_<";
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background-color: #c9194f;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+}
+
+/* Pseudo-element */
+.intro::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c9194f;
+}
+
+.skills-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+/* Child selector */
+.skills-list > li {
+  background-color: #8f1723;
+  color: #f5e9d0;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* display: none removes the paragraph completely, so it does not leave any empty space.*/
+.hide-none {
+  display: none;
+}
+
+/* visibility: hidden makes the paragraph invisible, but its original space is still kept on the page. */
+.hide-visibility {
+  visibility: hidden;
+}
+
+.scroll-box {
+  height: 120px;
+  overflow: auto;
+}
+
+/* --- FOOTER --- */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #430d14;
+  color: #d9a79b;
+  font-size: 0.9rem;
+  border-top: 1px solid #7f0712;
+}
+
+/* CARD WIDTH CALCULATION: Since box-sizing is border-box, the declared width of 500px already includes the 24px left/right padding and the 2px left/right borders. 
+Therefore, the total rendered width of one .card is exactly 500px.*/
+
+/* MY ANSWERS: */
+
+/*
+1. The .card h2 rule wins because it is more specific than the general h2 rule. Although both rules target h2, but .card h2 has a
+   class selector and an element selector, so it has higher specificity.
+
+2. If box-sizing were content-box, the rendered width would be: 500px + 24px left padding + 24px right padding
+   + 2px left border + 2px right border = 552px.
+
+3. I would use visibility: hidden when I want something to disappear visually but still keep its space on the page.
+   This can be bery useful especially when keeping the layout from moving.
+*/
